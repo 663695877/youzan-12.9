@@ -44,14 +44,23 @@ new Vue({
           console.log(res)
         })
       }
+    },
+    toSearch (list) {
+      location.href = `search.html?keyword=${list.name}&id=${list.id}`
     }
   },
   components: {
     Foot
   },
   filters: {
-    number(price) {
-      return price + '.00'
+    number (price) {
+      let priceStr = '' + price
+      if (priceStr.indexOf('.') > -1) {
+        let arr = priceStr.split('.')
+        return arr[0] + '.' + (arr[1] + '0').substr(0, 2)
+      } else {
+        return priceStr + '.00'
+      }
     }
   }
 })

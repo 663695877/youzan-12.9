@@ -3,7 +3,20 @@ let url = {
   banner: '/index/banner',
   topList: '/category/topList',
   cateRank: '/category/rank',
-  subList: '/category/subList'
+  subList: '/category/subList',
+  searchList: '/search/list',
+  details: '/goods/details',
+  deal: '/goods/deal',
+  cartAdd: '/cart/add',
+  cartLists: '/cart/list',
+  cartReduce: '/cart/reduce',
+  cartRemove: '/cart/remove',
+  cartMremove: '/cart/mremove',
+  addressLists: '/address/list',
+  addressAdd: '/address/add',
+  addressRemove: '/address/remove',
+  addressUpdate: '/address/update',
+  addressSetDefault: '/address/setDefault'
 }
 
 // 开发环境和真实环境的切换

@@ -1,14 +1,8 @@
 <template>
-  <swiper :options="swiperOption" class="banner">
-    <swiper-slide v-for="(slide, index) in lists" :key="index">
-      <img :src="slide.image" alt="">
-    </swiper-slide>
-    <div class="swiper-pagination" slot="pagination"></div>
-  </swiper>
+  <div></div>
 </template>
 
 <script>
-import { swiper, swiperSlide } from 'vue-awesome-swiper'
 
 export default {
   data () {
@@ -16,6 +10,12 @@ export default {
       swiperOption: {
         pagination: {
           el: '.swiper-pagination'
+        },
+        loop: true,
+        autoplay: {
+          delay: 3000,
+          stopOnLastSlide: false,
+          disableOnInteraction: false
         }
       }
     }
@@ -24,24 +24,27 @@ export default {
     lists: Array
   },
   components: {
-    swiper,
-    swiperSlide
+
   }
 }
 </script>
 
 <style>
-  .banner{
-    height: 100%;
+  .slider-wrapper {
     width: 100%;
-    font-size: 20px;
+    height: 180px;
+    font-size: 40px;
+    background: red;
+    z-index: 999;
   }
-  .swiper-slide{
-    height: 100%;
+  .swiper-img{
     width: 100%;
+    height: 10px;
+    background: red;
   }
-  img{
+  .img-item {
     width: 100%;
-    height: 100%;
+    height: 10px;
+    z-index: 99999;
   }
 </style>
